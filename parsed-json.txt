@@ -1,0 +1,31 @@
+Test Sequence Name: EMILIA_TEST_SEQ
+------------------------------------------------------------
+
+1    START
+------------------------------------------------------------
+1.1 TestStepStartApplication
+1.2 TestStepWaitForGui
+
+2    COMMAND TRANSFER
+------------------------------------------------------------
+2.1 TestStepStimuli
+
+3    MOVE TO CTRL PAGE 
+------------------------------------------------------------
+3.1 TestStepCheckSelectButton
+3.2 TestStepStimuli
+
+4    BUTTON CONTROL TEST BUTTON
+------------------------------------------------------------
+4.1 TestStepCheckSelectButton
+4.2 TestStepStimuli
+
+5    CHECKED BLOCKED INDICATOR
+------------------------------------------------------------
+5.1 TestStepCheckTextIndicator
+
+6    CHECK OFF BUTTON
+------------------------------------------------------------
+6.1 TestStepCheckTextIndicator
+
+------------------------------------------------------------

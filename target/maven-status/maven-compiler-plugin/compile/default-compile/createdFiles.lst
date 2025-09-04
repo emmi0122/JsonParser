@@ -1,0 +1,6 @@
+se\berg\domain\TestCase.class
+se\berg\Main.class
+se\berg\service\TestSequencePrinter.class
+se\berg\io\JsonParser.class
+se\berg\domain\TestStep.class
+se\berg\domain\TestSequence.class
