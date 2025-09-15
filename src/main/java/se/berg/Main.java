@@ -1,5 +1,7 @@
 package se.berg;
 
+import java.net.URL;
+
 import se.berg.domain.TestSequence;
 import se.berg.io.JsonParser;
 import se.berg.service.TestSequencePrinter;
