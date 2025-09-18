@@ -25,7 +25,8 @@ public class HtmlReportGenerator {
         // Test sekvens namn
         html.append("    <div class=\"main-content\">\n");
         html.append("        <h1>FACTORY ACCEPTANCE AND IPV TEST FOR BERG® MPC800M</h1>\n");
-        html.append("        <h2>Test Sequence: ").append(sequence.getName().toUpperCase()).append("</h2>\n");
+        html.append("        <h2>[Vessel Type]</h2>\n");
+        html.append("        <h2>[System Description]</h2>\n");
 
         //Project information (can be extended)
         html.append(generateProjectInfo());
@@ -39,6 +40,36 @@ public class HtmlReportGenerator {
                 line-height: 1.4;
                 color: #333;
             }
+
+            .header-table td {
+                border: 2px solid black;
+                padding: 8px;
+            }
+
+            .header-table .empty-td {
+                padding: 15px;
+            }
+
+            .main-content h1 {
+                margin: 20px 0;
+            }
+
+            .main-content h2 {
+                margin: 15px 0;
+            }
+
+            .vessel {
+                margin-bottom: 3em;
+            }
+
+            .project-info p {
+                padding: 5px;
+            }
+
+            .project-info .label {
+                font-weight: bold;
+                padding-bottom: 2em;
+            }
         """;
     }
 
@@ -46,34 +77,32 @@ public class HtmlReportGenerator {
         return """
             <table class="header-table">
                 <tr>
-                    <td style="width: 25%;">Order No</td>
-                    <td style="width: 25%;">Shipyard</td>
-                    <td style="width: 25%;">Date</td>
+                    <td style="width: 25%;"><strong>Order No</strong></td>
+                    <td style="width: 25%;"><strong>Shipyard</strong></td>
+                    <td style="width: 25%;"><strong>Date</strong></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="empty-td">&nbsp;</td>
+                    <td class="empty-td">&nbsp;</td>
+                    <td class="empty-td">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Location</td>
-                    <td>New Build</td>
-                    <td>Class</td>
+                    <td><strong>Location</strong></td>
+                    <td><strong>New Build No</strong></td>
+                    <td><strong>Class</strong></td>
                 </tr>
                 <tr>
-                   <td></td>
-                   <td></td>
-                   <td></td>
+                    <td class="empty-td">&nbsp;</td>
+                    <td class="empty-td">&nbsp;</td>
+                    <td class="empty-td">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>BERG Technician Signature</td>
-                    <td>Class Surveyor's Stamp and Signature</td>
-                    <td></td>
+                    <td><strong>BERG Technician Signature</strong></td>
+                    <td colspan="2"><strong>Class Surveyor's Stamp and Signature</strong></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>&nbsp;</td>
+                    <td colspan="2" class="empty-td">&nbsp;</td>
                 </tr>
             </table>
         """;
@@ -81,32 +110,18 @@ public class HtmlReportGenerator {
 
     private static String generateProjectInfo() {
         return """
-            <table class="project-info">
-                <tr>
-                    <td class="label">Designer:</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="label">Shipyard:</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="label">Vessel Type:</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="label">Yard No/Reference:</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="label">Berg Project Number:</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="label">Berg Order Number:</td>
-                    <td></td>
-                </tr>
-            </table>
+            <div class="project-info">
+                <div class="label">
+                    <p>Designer:</p>
+                    <p>Shipyard:</p>
+                    <p>Vessel Type:</p>
+                    <p>Yard No/Reference:</p>
+                </div>
+                <div class="label">
+                    <p>Berg Project Number:</p>
+                    <p>Berg Order Number:</p>
+                </div>
+            </div>
         """;
     }
 }
