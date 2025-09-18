@@ -1,5 +1,8 @@
 package se.berg.service;
 
+import java.util.*;
+
+import junit.framework.TestCase;
 import se.berg.domain.TestSequence;
 
 public class HtmlReportGenerator {
@@ -30,6 +33,15 @@ public class HtmlReportGenerator {
 
         //Project information (can be extended)
         html.append(generateProjectInfo());
+
+        //Table of contents
+        html.append(generateTableOfContents(sequence.getTestCases()));
+
+        //test cases
+        for (int i = 0; i < sequence.getTestCases().size(); i++) {
+            TestCase testCase = sequence.getTestCases().get(i);
+            html.append(generateTestCaseSection(testCase, i + 1));
+        }
     }
 
     private static String getCSS() {
@@ -123,5 +135,21 @@ public class HtmlReportGenerator {
                 </div>
             </div>
         """;
+    }
+
+    private static String generateTableOfContents(List<TestCase> testCases) {
+        StringBuilder toc = new StringBuilder();
+        toc.append("        <div class=\"test-section\">\n");
+        toc.append("            <h3>TABLE OF CONTENTS</h3>\n");
+        toc.append("            <ol>\n");
+
+        for (int i = 0; i < testCases.size(); i++) {
+            String caseName = testCases.get(i).getName();
+            toc.append("                <li>").append(caseName).append("</li>\n");
+        }
+
+        toc.append("            </ol>\n");
+        toc.append("        <div>\n");
+        return toc.toString();
     }
 }
