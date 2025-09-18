@@ -139,7 +139,7 @@ public class HtmlReportGenerator {
 
     private static String generateTableOfContents(List<TestCase> testCases) {
         StringBuilder toc = new StringBuilder();
-        toc.append("        <div class=\"test-section\">\n");
+        toc.append("        <div class=\"toc\">\n");
         toc.append("            <h3>TABLE OF CONTENTS</h3>\n");
         toc.append("            <ol>\n");
 
@@ -151,5 +151,27 @@ public class HtmlReportGenerator {
         toc.append("            </ol>\n");
         toc.append("        <div>\n");
         return toc.toString();
+    }
+
+    private static String generateTestCaseSection(TestCase testCase, int sectionNumber) {
+        StringBuilder section = new StringBuilder();
+
+        section.append("        <div class=\"test-section\">\n");
+        section.append("            <h3>").append(sectionNumber).append(" ").append(testCase.getName().toUpperCase()).append("</h3>\n");
+        section.append("            <table class=\"test-table\">\n");
+        section.append("                <thea>\n");
+        section.append("                    <tr>\n");
+        section.append("                        <th class=\"item-number\">Item</th>\n");
+        section.append("                        <th class=\"description\">Description</th>\n");
+        section.append("                        <th class=\"checkbox-col\">Pass</th>\n");
+        section.append("                        <th class=\"checkbox-col\">Fail</th>\n");
+        section.append("                        <th class=\"checkbox-col\">N/A</th>\n");
+        section.append("                    </tr>\n");
+        section.append("                </thead>\n");
+        section.append("                <tbody>\n");
+
+
+
+        return section.toString();
     }
 }
