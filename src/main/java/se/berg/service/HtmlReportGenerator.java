@@ -81,6 +81,32 @@ public class HtmlReportGenerator {
 
     private static String generateProjectInfo() {
         return """
+            <table class="project-info">
+                <tr>
+                    <td class="label">Designer:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label">Shipyard:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label">Vessel Type:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label">Yard No/Reference:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label">Berg Project Number:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label">Berg Order Number:</td>
+                    <td></td>
+                </tr>
+            </table>
         """;
     }
 }
