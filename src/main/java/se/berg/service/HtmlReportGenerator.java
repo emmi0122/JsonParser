@@ -24,7 +24,25 @@ public class HtmlReportGenerator {
 
         //Test sequence name
         html.append("   <div class=\"main-content\">\n");
-        html.append("       <h1>FACTORY ACCEPTANCE AND IPV TEST FOR BERG® MPC800M</h1>\\n");
+        html.append("       <h1>FACTORY ACCEPTANCE AND IPV TEST FOR BERG® MPC800M</h1>\n");
         html.append("       <h2>Test Sequence: ").append(sequence.getName().toUpperCase()).append("</h2>\n");
+
+        //Project information (can be extended)
+        html.append(generateProjectInfo());
     }
+}
+
+private static String getCSS() {
+    return """
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.4;
+            color: #333;
+        }
+    """;
+}
+
+private static String generateHeader() {
+    
 }
