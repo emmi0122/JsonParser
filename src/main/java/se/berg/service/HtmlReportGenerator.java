@@ -44,6 +44,38 @@ public class HtmlReportGenerator {
 
     private static String generateHeader() {
         return """
+            <table class="header-table">
+                <tr>
+                    <td style="width: 25%;">Order No</td>
+                    <td style="width: 25%;">Shipyard</td>
+                    <td style="width: 25%;">Date</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>New Build</td>
+                    <td>Class</td>
+                </tr>
+                <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                </tr>
+                <tr>
+                    <td>BERG Technician Signature</td>
+                    <td>Class Surveyor's Stamp and Signature</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         """;
     }
 
