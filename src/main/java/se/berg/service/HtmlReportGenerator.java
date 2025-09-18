@@ -2,8 +2,7 @@ package se.berg.service;
 
 import java.util.*;
 
-import junit.framework.TestCase;
-import se.berg.domain.TestSequence;
+import se.berg.domain.*;
 
 public class HtmlReportGenerator {
     public static void generateReport(TestSequence sequence, String fileName) {
@@ -170,8 +169,27 @@ public class HtmlReportGenerator {
         section.append("                </thead>\n");
         section.append("                <tbody>\n");
 
+        List<TestStep> steps = testCase.getTestSteps();
+        for (int i = 0; i < steps.size(); i++) {
+            TestStep step = steps.get(i);
+            String itemNumber = sectionNumber + "." + (i + 1) + ".";
 
+            //Convert technical name to a more readable description
+            String description = convertStepTypeToDescription(step.getDescription());
 
+            section.append("                    <tr>\n");
+            section.append("                        <td class=\"item-number\"><strong>").append(itemNumber).append("</strong></td>\n");
+            section.append("                        <td class=\"description\">").append(description).append("></td>\n");
+            section.append("                        <td class=\"checkbox-col\">☐</td>\n");
+            section.append("                        <td class=\"checkbox-col\">☐</td>\n");
+            section.append("                        <td class=\"checkbox-col\">☐</td>\n");
+            section.append("                    </tr>\n");
+        }
+
+        section.append("                </tbody>\n");
+        section.append("            </table>\n");
+        section.append("        </div>\n");
+        
         return section.toString();
     }
 }
