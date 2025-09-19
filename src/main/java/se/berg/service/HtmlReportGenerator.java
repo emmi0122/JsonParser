@@ -192,4 +192,28 @@ public class HtmlReportGenerator {
         
         return section.toString();
     }
+
+    private static String convertStepTypeToDescription(String stepType) {
+        //Convert technical step types to user readable text
+        //Make it more flexible for different JSON-files
+        switch (stepType) {
+            case "TestStepStartApplication":
+                return "Start application and verify system initialization";
+            case "TestStepWaitFor Gui":
+                return "Wait for GUI to load completely";
+            case "TestStepStimuli":
+                return "Execute test stimuli and verify respons";
+            case "TestStepCheckTextIndicator":
+                return "Verify text indicator status and color";
+            case "TestStepDelay":
+                return "Wait for system response";
+            default:
+                //Fallback: Convert CamelCase to readable text
+                return stepType.replaceAll("([A-z])", " $1".trim());
+        }
+    }
+
+    private static String generateFooter() {
+        
+    }
 }
