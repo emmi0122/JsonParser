@@ -68,7 +68,7 @@ public class HtmlReportGenerator {
                 margin: 0;
                 padding: 0;
             }
-        
+
             body {
                 font-family: Arial, sans-serif;
                 margin: 5em 20em 0 20em;
@@ -148,7 +148,7 @@ public class HtmlReportGenerator {
                 width: 100%;
                 border-collapse: collapse;
                 margin: 10px 0;
-                border: 2.3px solic black;
+                border: 2.3px solid black;
             }
 
             .test-table th {
@@ -182,7 +182,7 @@ public class HtmlReportGenerator {
             .signature-section {
                 margin-top: 40px;
                 border: 2.3px solid black;
-                padding: 20px;
+                pad: 20px;
             }
 
             .signature-table {
