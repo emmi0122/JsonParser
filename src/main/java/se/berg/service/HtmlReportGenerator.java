@@ -64,6 +64,11 @@ public class HtmlReportGenerator {
 
     private static String getCSS() {
         return """
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        
             body {
                 font-family: Arial, sans-serif;
                 margin: 20px;
