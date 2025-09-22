@@ -71,9 +71,16 @@ public class HtmlReportGenerator {
         
             body {
                 font-family: Arial, sans-serif;
-                margin: 20px;
+                margin: 5em 20em 0 20em;
                 line-height: 1.4;
                 color: #333;
+            }
+
+            .header-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+                border: 2.3px solid black;
             }
 
             .header-table td {
@@ -125,6 +132,51 @@ public class HtmlReportGenerator {
                 display: inline-block;
                 text-align: right;
                 margin: 5px 2em 0 0;
+            }
+
+            .test-section {
+                margin: 30px 0;
+                page-break-inside: avoid;
+            }
+
+            .test-section h3 {
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            .test-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 10px 0;
+                border: 2.3px solic black;
+            }
+
+            .test-table th {
+                border: 2px solid black;
+                padding: 8px;
+                background-color: #f0f0f0;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .test-table td {
+                border: 2px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+
+            .test-table .description {
+                text-align: left;
+                width: 60%;
+            }
+
+            .test-table .item-number {
+                width: 10%;
+                font-weight: bold;
+            }
+
+            .checkbox-col {
+                width: 10%;
             }
 
             .signature-section {
