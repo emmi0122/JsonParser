@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Acceptance and IPV Test Report</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 5em 20em 0 20em;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    .header-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        border: 2.3px solid black;
+    }
+
+    .header-table td {
+        border: 2px solid black;
+        padding: 8px;
+    }
+
+    .header-table .empty-td {
+        padding: 15px;
+    }
+
+    .main-content h1 {
+        margin: 20px 0;
+    }
+
+    .main-content h2 {
+        margin: 15px 0;
+    }
+
+    .vessel {
+        margin-bottom: 3em;
+    }
+
+    .project-info p {
+        padding: 5px;
+    }
+
+    .project-info .label {
+        font-weight: bold;
+        padding-bottom: 2em;
+    }
+
+    .toc {
+        margin: 20px 0;
+    }
+
+    .toc ol.no-dot {
+        list-style: none;
+        padding-left: 0;
+        counter-reset: num;
+    }
+
+    .toc ol.no-dot li {
+        counter-increment: num;
+    }
+
+    .toc ol.no-dot li::before {
+        content: counter(num) "";
+        display: inline-block;
+        text-align: right;
+        margin: 5px 2em 0 0;
+    }
+
+    .test-section {
+        margin: 30px 0;
+        page-break-inside: avoid;
+    }
+
+    .test-section h3 {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .test-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+        border: 2.3px solid black;
+    }
+
+    .test-table th {
+        border: 2px solid black;
+        padding: 8px;
+        background-color: #f0f0f0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .test-table td {
+        border: 2px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .test-table .description {
+        text-align: left;
+        width: 60%;
+    }
+
+    .test-table .item-number {
+        width: 10%;
+        font-weight: bold;
+    }
+
+    .checkbox-col {
+        width: 10%;
+    }
+
+    .signature-section {
+        margin-top: 40px;
+        pad: 20px;
+    }
+
+    .signature-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2.3px solid black;
+    }
+
+    .signature-table td {
+        padding: 20px;
+    }
+
+    @media print {
+        body { margin: 15px; }
+        .test-section { page-break-inside: avoid; }
+    }
+    </style>
+</head>
+<body>
+    <table class="header-table">
+        <tr>
+            <td style="width: 25%;"><strong>Order No</strong></td>
+            <td style="width: 25%;"><strong>Shipyard</strong></td>
+            <td style="width: 25%;"><strong>Date</strong></td>
+        </tr>
+        <tr>
+            <td class="empty-td">&nbsp;</td>
+            <td class="empty-td">&nbsp;</td>
+            <td class="empty-td">&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Location</strong></td>
+            <td><strong>New Build No</strong></td>
+            <td><strong>Class</strong></td>
+        </tr>
+        <tr>
+            <td class="empty-td">&nbsp;</td>
+            <td class="empty-td">&nbsp;</td>
+            <td class="empty-td">&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>BERG Technician Signature</strong></td>
+            <td colspan="2"><strong>Class Surveyor's Stamp and Signature</strong></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" class="empty-td">&nbsp;</td>
+        </tr>
+    </table>
+    <div class="main-content">
+        <h1>FACTORY ACCEPTANCE AND IPV TEST FOR BERG® MPC800M</h1>
+        <h2>[Vessel Type]</h2>
+        <h2>[System Description]</h2>
+    <div class="project-info">
+        <div class="label">
+            <p>Designer:</p>
+            <p>Shipyard:</p>
+            <p>Vessel Type:</p>
+            <p>Yard No/Reference:</p>
+        </div>
+        <div class="label">
+            <p>Berg Project Number:</p>
+            <p>Berg Order Number:</p>
+        </div>
+    </div>
+        <div class="toc">
+            <h3>TABLE OF CONTENTS</h3>
+            <ol class="no-dot">
+                <li>start</li>
+                <li>Command Transfer</li>
+                <li>Move to CTRL PAGE </li>
+                <li>Button Control TEST button</li>
+                <li>Checked BLOCKED Indicator</li>
+                <li>Check OFF button</li>
+            </ol>
+        <div>
+        <div class="test-section">
+            <h3>1 START</h3>
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th class="item-number">Item</th>
+                        <th class="description">Description</th>
+                        <th class="checkbox-col">Pass</th>
+                        <th class="checkbox-col">Fail</th>
+                        <th class="checkbox-col">N/A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-number"><strong>1.1.</strong></td>
+                        <td class="description">Start application and verify system initialization></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="item-number"><strong>1.2.</strong></td>
+                        <td class="description">TestStepWaitForGui></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="test-section">
+            <h3>2 COMMAND TRANSFER</h3>
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th class="item-number">Item</th>
+                        <th class="description">Description</th>
+                        <th class="checkbox-col">Pass</th>
+                        <th class="checkbox-col">Fail</th>
+                        <th class="checkbox-col">N/A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-number"><strong>2.1.</strong></td>
+                        <td class="description">Execute test stimuli and verify respons></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="test-section">
+            <h3>3 MOVE TO CTRL PAGE </h3>
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th class="item-number">Item</th>
+                        <th class="description">Description</th>
+                        <th class="checkbox-col">Pass</th>
+                        <th class="checkbox-col">Fail</th>
+                        <th class="checkbox-col">N/A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-number"><strong>3.1.</strong></td>
+                        <td class="description">TestStepCheckSelectButton></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="item-number"><strong>3.2.</strong></td>
+                        <td class="description">Execute test stimuli and verify respons></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="test-section">
+            <h3>4 BUTTON CONTROL TEST BUTTON</h3>
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th class="item-number">Item</th>
+                        <th class="description">Description</th>
+                        <th class="checkbox-col">Pass</th>
+                        <th class="checkbox-col">Fail</th>
+                        <th class="checkbox-col">N/A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-number"><strong>4.1.</strong></td>
+                        <td class="description">TestStepCheckSelectButton></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="item-number"><strong>4.2.</strong></td>
+                        <td class="description">Execute test stimuli and verify respons></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="test-section">
+            <h3>5 CHECKED BLOCKED INDICATOR</h3>
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th class="item-number">Item</th>
+                        <th class="description">Description</th>
+                        <th class="checkbox-col">Pass</th>
+                        <th class="checkbox-col">Fail</th>
+                        <th class="checkbox-col">N/A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-number"><strong>5.1.</strong></td>
+                        <td class="description">Verify text indicator status and color></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="test-section">
+            <h3>6 CHECK OFF BUTTON</h3>
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th class="item-number">Item</th>
+                        <th class="description">Description</th>
+                        <th class="checkbox-col">Pass</th>
+                        <th class="checkbox-col">Fail</th>
+                        <th class="checkbox-col">N/A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-number"><strong>6.1.</strong></td>
+                        <td class="description">Verify text indicator status and color></td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                        <td class="checkbox-col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<div class="signature-section">
+    <h3>NOTES</h3>
+    <table class="signature-table">
+        <tr>
+            <td style="width: 50%;">
+                <strong>Test Date:</strong<br>
+2025-09-22 10:33                </td>
+                <td style="width: 50%">
+                    <strong>Generated by:</strong<br>
+                    Berg Propulsion Test System
+                </td>
+            </tr>
+        </table>
+    </div>
+   </div>
+</body>
+</html>

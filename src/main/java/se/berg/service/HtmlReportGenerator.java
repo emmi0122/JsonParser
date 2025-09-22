@@ -181,19 +181,17 @@ public class HtmlReportGenerator {
 
             .signature-section {
                 margin-top: 40px;
-                border: 2.3px solid black;
                 pad: 20px;
             }
 
             .signature-table {
                 width: 100%;
                 border-collapse: collapse;
+                border: 2.3px solid black;
             }
 
             .signature-table td {
                 padding: 20px;
-                text-align: center;
-                border: 2px solid black;
             }
 
             @media print {
@@ -299,9 +297,9 @@ public class HtmlReportGenerator {
             section.append("                    <tr>\n");
             section.append("                        <td class=\"item-number\"><strong>").append(itemNumber).append("</strong></td>\n");
             section.append("                        <td class=\"description\">").append(description).append("></td>\n");
-            section.append("                        <td class=\"checkbox-col\">☐</td>\n");
-            section.append("                        <td class=\"checkbox-col\">☐</td>\n");
-            section.append("                        <td class=\"checkbox-col\">☐</td>\n");
+            section.append("                        <td class=\"checkbox-col\">&nbsp;</td>\n");
+            section.append("                        <td class=\"checkbox-col\">&nbsp;</td>\n");
+            section.append("                        <td class=\"checkbox-col\">&nbsp;</td>\n");
             section.append("                    </tr>\n");
         }
 
@@ -338,10 +336,7 @@ public class HtmlReportGenerator {
 
         return """
             <div class="signature-section">
-                <h3>NOTES>/h3>
-                <p>%nbsp;</p>
-                <p>%nbsp;</p>
-                <p>%nbsp;</p>
+                <h3>NOTES</h3>
                 <table class="signature-table">
                     <tr>
                         <td style="width: 50%;">
