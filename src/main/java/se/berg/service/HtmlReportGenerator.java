@@ -210,7 +210,7 @@ public class HtmlReportGenerator {
     private static String generateHeader() {
         return """
             <div class="header-content">
-                <img src="images/berg-propulsion.png" alt="Picture of Berg Propulsion logo">
+                <img src="src/main/java/se/berg/service/images/berg-propulsion.png" alt="Picture of Berg Propulsion logo">
 
                 <div class="title">
                     <h2>MPC800</h2>

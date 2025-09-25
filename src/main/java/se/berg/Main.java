@@ -15,7 +15,7 @@ public class Main {
             TestSequencePrinter.print(seq, "parsed-json.txt");
 
             //Generate HTML report
-            HtmlReportGenerator.generateReport(seq, "src/main/java/se/berg/service/test-report.html");
+            HtmlReportGenerator.generateReport(seq, "test-report.html");
             System.out.println("Reports generated succesfully!");
             System.out.println("- Text report: parsed-json.txt");
             System.out.println("- HTML report: test-report.html");
