@@ -89,25 +89,25 @@ public class HtmlReportGenerator {
             .header-table {
                 width: 100%;
                 border-collapse: collapse;
-                margin-bottom: 20px;
+                margin-bottom: 5em;
                 border: 2.3px solid black;
             }
 
             .header-table td {
                 border: 2px solid black;
-                padding: 8px;
+                padding: 0.5em;
             }
 
             .header-table .empty-td {
-                padding: 15px;
+                padding: 1em;
             }
 
             .main-content h1 {
-                margin: 20px 0;
+                margin: 2em 0 1em;
             }
 
             .main-content h2 {
-                margin: 15px 0;
+                margin: 0 0 0.7em 0;
             }
 
             .vessel {
@@ -124,7 +124,7 @@ public class HtmlReportGenerator {
             }
 
             .toc {
-                margin: 20px 0;
+                margin: 2em 0;
             }
 
             .toc ol.no-dot {
@@ -145,25 +145,25 @@ public class HtmlReportGenerator {
             }
 
             .test-section {
-                margin: 30px 0;
+                margin: 3em 0;
                 page-break-inside: avoid;
             }
 
             .test-section h3 {
-                margin-bottom: 10px;
+                margin-bottom: 1em;
                 text-transform: uppercase;
             }
 
             .test-table {
                 width: 100%;
                 border-collapse: collapse;
-                margin: 10px 0;
+                margin: 1pem 0;
                 border: 2.3px solid black;
             }
 
             .test-table th {
                 border: 2px solid black;
-                padding: 8px;
+                padding: 0.5em;
                 background-color: #f0f0f0;
                 font-weight: bold;
                 text-align: center;
@@ -171,7 +171,7 @@ public class HtmlReportGenerator {
 
             .test-table td {
                 border: 2px solid black;
-                padding: 8px;
+                padding: 1em;
                 text-align: center;
             }
 
@@ -190,8 +190,8 @@ public class HtmlReportGenerator {
             }
 
             .note-section {
-                margin-top: 40px;
-                pad: 20px;
+                margin-top: 3em;
+                pad: 5em;
                 margin-bottom: 3em;
             }
 
