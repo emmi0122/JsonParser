@@ -189,19 +189,19 @@ public class HtmlReportGenerator {
                 width: 10%;
             }
 
-            .signature-section {
+            .note-section {
                 margin-top: 40px;
                 pad: 20px;
                 margin-bottom: 3em;
             }
 
-            .signature-table {
+            .note-table {
                 width: 100%;
                 border-collapse: collapse;
                 border: 2.3px solid black;
             }
 
-            .signature-table td {
+            .note-table td {
                 padding: 50em;
             }
         """;
@@ -347,9 +347,9 @@ public class HtmlReportGenerator {
 
     private static String generateFooter() {
         return """
-            <div class="signature-section">
+            <div class="note-section">
                 <h3>NOTES</h3>
-                <table class="signature-table">
+                <table class="note-table">
                     <tr>
                         <td></td>
                     </tr>
