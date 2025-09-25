@@ -14,7 +14,19 @@
         font-family: Arial, sans-serif;
         margin: 5em 20em 0 20em;
         line-height: 1.4;
-        color: #333;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3em;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     .header-table {
@@ -123,6 +135,7 @@
     .signature-section {
         margin-top: 40px;
         pad: 20px;
+        margin-bottom: 3em;
     }
 
     .signature-table {
@@ -132,16 +145,20 @@
     }
 
     .signature-table td {
-        padding: 20px;
-    }
-
-    @media print {
-        body { margin: 15px; }
-        .test-section { page-break-inside: avoid; }
+        padding: 50em;
     }
     </style>
 </head>
 <body>
+    <div class="header-content">
+        <img src="images/berg-propulsion.png" alt="Picture of Berg Propulsion logo">
+
+        <div class="title">
+            <h2>MPC800</h2>
+            <h2>FACTORY ACCEPTANCE TEST</h2>
+        </div>
+    </div>
+
     <table class="header-table">
         <tr>
             <td style="width: 25%;"><strong>Order No</strong></td>
@@ -198,7 +215,7 @@
                 <li>Checked BLOCKED Indicator</li>
                 <li>Check OFF button</li>
             </ol>
-        <div>
+        </div>
         <div class="test-section">
             <h3>1 START</h3>
             <table class="test-table">
@@ -214,14 +231,14 @@
                 <tbody>
                     <tr>
                         <td class="item-number"><strong>1.1.</strong></td>
-                        <td class="description">Start application and verify system initialization></td>
+                        <td class="description">Start application and verify system initialization</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="item-number"><strong>1.2.</strong></td>
-                        <td class="description">TestStepWaitForGui></td>
+                        <td class="description">TestStepWaitForGui</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
@@ -244,7 +261,7 @@
                 <tbody>
                     <tr>
                         <td class="item-number"><strong>2.1.</strong></td>
-                        <td class="description">Execute test stimuli and verify respons></td>
+                        <td class="description">Execute test stimuli and verify respons</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
@@ -267,14 +284,14 @@
                 <tbody>
                     <tr>
                         <td class="item-number"><strong>3.1.</strong></td>
-                        <td class="description">TestStepCheckSelectButton></td>
+                        <td class="description">TestStepCheckSelectButton</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="item-number"><strong>3.2.</strong></td>
-                        <td class="description">Execute test stimuli and verify respons></td>
+                        <td class="description">Execute test stimuli and verify respons</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
@@ -297,14 +314,14 @@
                 <tbody>
                     <tr>
                         <td class="item-number"><strong>4.1.</strong></td>
-                        <td class="description">TestStepCheckSelectButton></td>
+                        <td class="description">TestStepCheckSelectButton</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="item-number"><strong>4.2.</strong></td>
-                        <td class="description">Execute test stimuli and verify respons></td>
+                        <td class="description">Execute test stimuli and verify respons</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
@@ -327,7 +344,7 @@
                 <tbody>
                     <tr>
                         <td class="item-number"><strong>5.1.</strong></td>
-                        <td class="description">Verify text indicator status and color></td>
+                        <td class="description">Verify text indicator status and color</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
@@ -350,7 +367,7 @@
                 <tbody>
                     <tr>
                         <td class="item-number"><strong>6.1.</strong></td>
-                        <td class="description">Verify text indicator status and color></td>
+                        <td class="description">Verify text indicator status and color</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
                         <td class="checkbox-col">&nbsp;</td>
@@ -358,17 +375,11 @@
                 </tbody>
             </table>
         </div>
-<div class="signature-section">
-    <h3>NOTES</h3>
-    <table class="signature-table">
-        <tr>
-            <td style="width: 50%;">
-                <strong>Test Date:</strong<br>
-2025-09-22 10:33                </td>
-                <td style="width: 50%">
-                    <strong>Generated by:</strong<br>
-                    Berg Propulsion Test System
-                </td>
+    <div class="signature-section">
+        <h3>NOTES</h3>
+        <table class="signature-table">
+            <tr>
+                <td></td>
             </tr>
         </table>
     </div>
